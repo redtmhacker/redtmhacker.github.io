@@ -69,7 +69,7 @@
 }
 
 %clickable-transition {
-  transition: color 0.35s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 %no-cursor {
@@ -107,7 +107,7 @@
 }
 
 %sidebar-links {
-  color: rgba(117, 117, 117, 0.9);
+  color: var(--sidebar-muted-color);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -122,8 +122,9 @@
   -webkit-box-orient: vertical;
 }
 
-%no-decoration {
-  text-decoration: none;
+%text-highlight {
+  color: inherit;
+  font-weight: 600;
 }
 
 /* ---------- scss mixin --------- */
@@ -136,6 +137,11 @@
 @mixin ml-mr($value) {
   margin-left: $value;
   margin-right: $value;
+}
+
+@mixin pt-pb($val) {
+  padding-top: $val;
+  padding-bottom: $val;
 }
 
 @mixin pl-pr($val) {
